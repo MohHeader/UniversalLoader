@@ -4,13 +4,16 @@ import android.content.Context;
 
 /**
  * Created by mohheader on 6/4/14.
+ * Abstract Class, for Each Object Type ( Drawable, JSONObject, String, etc.... ) it will be extended
+ * Example {@link net.loader.loaders.DrawableRequest}
+ * & only the {@link #done(byte[])} method should be Overridden, To Convert the byte[] to a suitable output.
  */
 
 public abstract class LoaderRequest {
     Loader loader;
     protected OnLoadComplete mOnLoadComplete;
-
     protected Context mContext;
+
     public LoaderRequest(Context context){
         mContext = context;
     }

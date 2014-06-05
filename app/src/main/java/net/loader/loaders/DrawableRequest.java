@@ -17,6 +17,10 @@ public class DrawableRequest extends LoaderRequest {
         super(context);
     }
 
+    /**
+     *
+     * @param  b    byte[], of the file Downloaded.
+     */
     @Override
     public void done(byte[] b) {
         Bitmap bitmap = BitmapFactory.decodeByteArray(b, 0, b.length);
